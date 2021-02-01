@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile for {{ username }}</title>
+</head>
+<body>
+    <h1 id="welcome">Welcome {{ username }}</h1>
+    <p>Here are your friends:</p>
+    {% for friend in friends %}
+        <div class="friend">{{ friend }}</div>
+    {% endfor %}
+    <form action="/add_friend" method="POST">
+        <input type="text" id="friend" name="friend" placeholder="New Friend">
+    </form>
+</body>
+</html>
